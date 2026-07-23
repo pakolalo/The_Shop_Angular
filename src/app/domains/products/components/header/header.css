@@ -4,7 +4,6 @@ header,
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5em;
 }
 
 header {
@@ -15,6 +14,10 @@ header {
 .menu {
   width: 100%;
   justify-content: space-between;
+}
+
+.list-inline {
+  gap: 2em;
 }
 
 .ri-user-line,
@@ -70,4 +73,8 @@ a:hover {
 .title {
   font-family: var(--second-font);
   font-size: 3rem;
+}
+
+.ri-arrow-down-s-line {
+  font-size: 1.3rem;
 }
