@@ -1,23 +1,34 @@
-header,
-.menu,
-.list-inline {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 header {
+  padding-top: 10px;
   width: 100%;
   height: 80px;
 }
 
 .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: auto;
-  justify-content: space-between;
+  position: relative;
+}
+
+.menu > app-side-menu,
+.menu > app-cart {
+  display: contents;
+}
+
+.menu.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 40px;
 }
 
 .list-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 0.8em;
 }
 
@@ -61,7 +72,8 @@ a {
   border-bottom: 3px solid transparent;
 }
 
-a:hover {
+a:hover,
+button:hover {
   color: var(--grey-color);
   border-bottom: 3px solid var(--primary-color);
   transition: all linear 0.3s;
@@ -82,8 +94,8 @@ a:hover {
   height: 20px;
   border-radius: 50%;
   position: absolute;
-  top: 0px;
-  right: 6px;
+  top: 3px;
+  right: -4px;
   background-color: var(--primary-color);
   color: var(--white-color);
   font-size: 1.3rem;
@@ -106,7 +118,7 @@ a:hover {
 
 .title {
   font-family: var(--second-font);
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .ri-arrow-down-s-line {
@@ -115,8 +127,14 @@ a:hover {
 
 @media (min-width: 890px) {
   .menu {
-    width: 100%;
     justify-content: space-between;
+  }
+
+  .menu.container {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
   }
 
   .list-inline {
@@ -135,4 +153,8 @@ a:hover {
   .left-item-floating {
     display: flex;
   }
+
+  .title {
+  font-size: 3rem;
+}
 }

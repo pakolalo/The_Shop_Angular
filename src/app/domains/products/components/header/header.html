@@ -50,15 +50,17 @@
         </a>
       </li>
       <li>
-        <a
-        href=""
+        <button
+        type="button"
+        (click)="toggleCart()"
         class="item-floating-container"
         >
           <span class="item-floating">0</span>
           <i class="ri-shopping-bag-line"></i>
-        </a>
+        </button>
       </li>
     </ul>
     <app-side-menu />
+    <app-cart />
   </nav>
 </header>

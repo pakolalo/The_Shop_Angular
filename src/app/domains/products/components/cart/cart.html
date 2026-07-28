@@ -1,0 +1,26 @@
+<section class="container" [class.active]="isOpen">
+  <div class="navigation-container">
+    <a
+    href=""
+    class="navigation-item-1"
+    >Home</a>
+    <i class="ri-arrow-right-s-line"></i>
+    <a
+    class="navigation-item-2"
+    href=""
+    >Cart</a>
+  </div>
+  <h2>Cart</h2>
+    <ul class="cart-items-container">
+      @for (product of products(); track product) {
+        <app-cart-product
+      [product]="product"
+      ></app-cart-product>
+      }
+    </ul>
+    <div class="total-container">
+      <p>SUBTOTAL:</p>
+      <h3>$ 152.00</h3>
+    </div>
+    <button class="checkout-button">Checkout</button>
+</section>
