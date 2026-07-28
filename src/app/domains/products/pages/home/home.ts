@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Header } from './../../components/header/header'
-import { SideMenu } from "../../components/side-menu/side-menu";
+import { Product } from "../../components/product/product";
 
 @Component({
   selector: 'app-home',
-  imports: [Header, SideMenu],
+  imports: [Header, Product],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

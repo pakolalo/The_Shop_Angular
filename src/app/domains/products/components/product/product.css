@@ -1,0 +1,24 @@
+.product-container {
+  text-align: center;
+  line-height: 34px;
+}
+
+figure {
+  width: 270px;
+  height: 340px;
+}
+
+img {
+  width:100%;
+}
+
+h3 {
+  font-family: var(--primary-font);
+  font-size: var(--fs14);
+  font-weight: var(--fw600);
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
