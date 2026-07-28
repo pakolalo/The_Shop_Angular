@@ -1,40 +1,45 @@
 <header>
   <nav class="menu container">
     <ul class="list-inline">
-    <li>
-      <a href="">
-        <i class="ri-user-line"></i>
-      </a>
-    </li>
-    <li>
-      <a href="">
-        <span class="item-floating">7</span>
-        <i class="ri-star-line"></i>
-      </a>
-    </li>
-    </ul>
-    <ul class="list-inline">
-      <li>
-        <a href="">HOME</a>
-      </li>
-      <li class="list-container">
-        <a href="">PRODUCTS</a>
-        <i class="ri-arrow-down-s-line"></i>
+      <li class="side-menu">
+        <button type="button" (click)="toggleSideMenu()">
+          <i class="ri-menu-line"></i>
+        </button>
       </li>
       <li>
-        <a href="">DISC</a>
+        <a href="">
+          <i class="ri-user-line"></i>
+        </a>
       </li>
       <li>
         <a
-        class="title"
         href=""
-        >The Shop</a>
+        class="item-floating-container"
+        >
+          <span class="left-item-floating">7</span>
+          <i class="ri-star-line"></i>
+        </a>
       </li>
-      <li class="list-container">
+    </ul>
+    <ul class="list-inline">
+      <li class="list-item">
+        <a href="">HOME</a>
+      </li>
+      <li class="list-container list-item">
+        <a href="">PRODUCTS</a>
+        <i class="ri-arrow-down-s-line"></i>
+      </li>
+      <li class="list-item">
+        <a href="">DISC</a>
+      </li>
+      <li>
+        <a class="title" href="">The Shop</a>
+      </li>
+      <li class="list-container list-item">
         <a href="">SPECIALS</a>
         <i class="ri-arrow-down-s-line"></i>
       </li>
-      <li>
+      <li class="list-item">
         <a href="">SALE</a>
       </li>
     </ul>
@@ -45,11 +50,15 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a
+        href=""
+        class="item-floating-container"
+        >
           <span class="item-floating">0</span>
           <i class="ri-shopping-bag-line"></i>
         </a>
       </li>
     </ul>
+    <app-side-menu />
   </nav>
 </header>

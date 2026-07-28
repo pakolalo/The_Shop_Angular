@@ -52,6 +52,13 @@ ul {
     list-style: none;
 }
 
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+  }
+
 .container {
   max-width: 1240px;
   margin: 0 auto;

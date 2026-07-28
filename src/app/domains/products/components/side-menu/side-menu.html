@@ -1,0 +1,50 @@
+<section class="side-menu" [class.active]="isOpen">
+  <div class="menu-container">
+    <section class="left-container">
+      <nav class="menu">
+        <ul class="list-container">
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a
+            href=""
+            class="list-item-container"
+            >
+              <span>Products</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">Discounts</a>
+          </li>
+          <li>
+            <a
+            href=""
+            class="list-item-container"
+            >
+              <span>Specials</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">Sales</a>
+          </li>
+        </ul>
+        <div class="bottom-container">
+          <a href="">
+            <button class="l-button">LOGIN</button>
+          </a>
+          <a href="">
+            <button class="r-button">REGISTER</button>
+          </a>
+        </div>
+      </nav>
+    </section>
+    <section class="right-container">
+      <button type="button" (click)="close()">
+        <i class="ri-close-line"></i>
+      </button>
+    </section>
+  </div>
+</section>

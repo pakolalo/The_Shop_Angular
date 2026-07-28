@@ -2,7 +2,7 @@ header,
 .menu,
 .list-inline {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -13,13 +13,15 @@ header {
 
 .menu {
   width: 100%;
+  height: auto;
   justify-content: space-between;
 }
 
 .list-inline {
-  gap: 2em;
+  gap: 0.8em;
 }
 
+.ri-menu-line,
 .ri-user-line,
 .ri-star-line,
 .ri-search-line,
@@ -28,30 +30,48 @@ header {
   font-weight: 100;
   width: 40px;
   height: 40px;
-  transition: all linear .3s;
+  transition: all linear 0.3s;
 }
 
+.ri-menu-line:hover,
 .ri-user-line:hover,
 .ri-star-line:hover,
 .ri-search-line:hover,
 .ri-shopping-bag-line:hover {
-  transition: all linear .3s;
+  transition: all linear 0.3s;
   color: var(--grey-color);
 }
 
+.ri-menu-line,
+.list-item {
+  display: block;
+}
+
+.ri-user-line,
+.ri-star-line,
+.list-item {
+  display: none;
+}
+
 a {
-  position: relative;
   padding-bottom: 5px;
   font-size: 1.5rem;
   font-weight: var(--fw600);
-  transition: all linear .3s;
+  transition: all linear 0.3s;
   border-bottom: 3px solid transparent;
 }
 
 a:hover {
   color: var(--grey-color);
   border-bottom: 3px solid var(--primary-color);
-  transition: all linear .3s;
+  transition: all linear 0.3s;
+}
+
+.item-floating-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item-floating {
@@ -62,12 +82,26 @@ a:hover {
   height: 20px;
   border-radius: 50%;
   position: absolute;
-  top: -25px;
-  right: -8px;
+  top: 0px;
+  right: 6px;
   background-color: var(--primary-color);
   color: var(--white-color);
   font-size: 1.3rem;
-  z-index: 1;
+}
+
+.left-item-floating {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: 6px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1.3rem;
 }
 
 .title {
@@ -77,4 +111,28 @@ a:hover {
 
 .ri-arrow-down-s-line {
   font-size: 1.3rem;
+}
+
+@media (min-width: 890px) {
+  .menu {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .list-inline {
+    gap: 2em;
+  }
+  .ri-menu-line {
+    display: none;
+  }
+
+  .ri-user-line,
+  .ri-star-line,
+  .list-item {
+    display: block;
+  }
+
+  .left-item-floating {
+    display: flex;
+  }
 }
