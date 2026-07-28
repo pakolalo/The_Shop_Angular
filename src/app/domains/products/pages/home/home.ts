@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Header } from './../../components/header/header'
-import { Product } from "../../components/product/product";
+import { ProductsList} from './../../components/products-list/products-list'
 
 @Component({
   selector: 'app-home',
-  imports: [Header, Product],
+  imports: [Header, ProductsList],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {}
+export class Home {
+
+}

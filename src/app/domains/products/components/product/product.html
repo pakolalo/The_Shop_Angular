@@ -1,8 +1,10 @@
 <div class="product-container">
   <figure>
-    <img [src]="img" alt="image">
+    <img [src]="product().image" alt="image">
   </figure>
-  <h3>Product 1</h3>
-  <p>$3000</p>
+  <h3>{{ product().title }}</h3>
+  <p>{{ product().price }}</p>
+  <p>{{ product().creationAt }}</p>
+  <button (click)="addToCartHandler()">Add to Cart</button>
 </div>
 
