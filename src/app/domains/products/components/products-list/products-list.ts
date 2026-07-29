@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Product } from './../product/product'
 import { ProductModel } from './../../models/product.model'
+import { CartService } from '../../services/cart';
 
 @Component({
   selector: 'app-products-list',
@@ -9,6 +10,8 @@ import { ProductModel } from './../../models/product.model'
   styleUrl: './products-list.css',
 })
 export class ProductsList {
+
+  private cartService = inject(CartService);
 
   products = signal<ProductModel[]>([]);
   favorite: boolean;
@@ -62,8 +65,7 @@ export class ProductsList {
     this.products.set(initProducts)
   }
 
-  fromChild(event: string) {
-    console.log('Estamos desde el padre');
-    console.log(event)
+  addToCart(product: ProductModel) {
+    this.cartService.addProduct(product);
   }
 }

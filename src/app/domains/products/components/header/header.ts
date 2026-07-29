@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, input, signal } from '@angular/core';
 import { SideMenu } from '../side-menu/side-menu';
 import { Cart } from './../cart/cart'
+import { CartService } from '../../services/cart';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,8 @@ import { Cart } from './../cart/cart'
 export class Header {
   isSideMenuOpen = signal(false);
   isCartOpen =signal(false)
+
+  cartService = inject(CartService);
 
   toggleSideMenu() {
     this.isSideMenuOpen.update((value) => {

@@ -55,7 +55,7 @@
         (click)="toggleCart()"
         class="item-floating-container"
         >
-          <span class="item-floating">0</span>
+          <span class="item-floating">{{ cartService.cartProducts().length }}</span>
           <i class="ri-shopping-bag-line"></i>
         </button>
       </li>

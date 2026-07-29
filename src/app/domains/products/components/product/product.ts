@@ -10,10 +10,9 @@ import { ProductModel } from './../../models/product.model'
 export class Product {
   product = input.required<ProductModel>();
 
-  addToCart = output<string>();
+  addToCart = output<ProductModel>();
 
   addToCartHandler() {
-    console.log('click from child')
-    this.addToCart.emit('hola este es un mensaje desde el hijo');
+    this.addToCart.emit(this.product());
   }
 }
