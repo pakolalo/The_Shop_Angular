@@ -56,6 +56,19 @@ h2 {
   text-align: center;
 }
 
+.cart-items-container {
+  width: min(100%, 640px);
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+app-cart-product {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
 .total-container {
   margin-top: 40px;
   gap: 2em;
@@ -88,6 +101,10 @@ h2 {
 }
 
 @media (min-width: 890px) {
+  .cart-items-container {
+    width: min(100%, 900px);
+  }
+
   .total-container {
     justify-content: end;
   }
