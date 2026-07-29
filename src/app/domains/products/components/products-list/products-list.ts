@@ -22,7 +22,6 @@ export class ProductsList {
 
     const initProducts: ProductModel[] = [
       {
-        id: Date.now(),
         title: 'Product 1',
         price: 19.50,
         image: 'https://picsum.photos/270/340?r=22',
@@ -30,7 +29,6 @@ export class ProductsList {
         creationAt: new Date().toISOString(),
       },
       {
-        id: Date.now(),
         title: 'Product 2',
         price: 19.50,
         image: 'https://picsum.photos/270/340?r=23',
@@ -38,7 +36,6 @@ export class ProductsList {
         creationAt: new Date().toISOString(),
       },
       {
-        id: Date.now(),
         title: 'Product 3',
         price: 19.50,
         image: 'https://picsum.photos/270/340?r=24',
@@ -46,7 +43,6 @@ export class ProductsList {
         creationAt: new Date().toISOString(),
       },
       {
-        id: Date.now(),
         title: 'Product 4',
         price: 19.50,
         image: 'https://picsum.photos/270/340?r=25',
@@ -54,15 +50,18 @@ export class ProductsList {
         creationAt: new Date().toISOString(),
       },
       {
-        id: Date.now(),
         title: 'Product 5',
         price: 19.50,
         image: 'https://picsum.photos/270/340?r=26',
         favorite: this.favorite,
         creationAt: new Date().toISOString(),
       },
-    ];
-    this.products.set(initProducts)
+    ].map((product, index) => ({
+      ...product,
+      id: Date.now() + index,
+    }));
+
+    this.products.set(initProducts);
   }
 
   addToCart(product: ProductModel) {

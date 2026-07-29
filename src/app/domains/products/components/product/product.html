@@ -5,7 +5,11 @@
       <button
       type="button"
       class="add-to-favorite-button"
-      ><i class="ri-star-line"></i></button>
+      (click)="toggleFavorite()"
+      ><i
+      [class.ri-star-fill]="isFavorite()"
+      [class.ri-star-line]="!isFavorite()"
+      ></i></button>
       <button
       type="button"
       class="go-to-button"
