@@ -3,22 +3,81 @@
   line-height: 34px;
 }
 
-figure {
+.product-container figure {
+  position: relative;
   width: 270px;
   height: 340px;
+  overflow: hidden; /* fix: contiene el scale del img */
+  margin: 0 auto;
 }
 
-img {
-  width:100%;
+.product-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s linear;
 }
 
-h3 {
+.product-container figure:hover img {
+  transform: scale(1.1);
+}
+
+.buttons-container {
+  position: absolute;
+  bottom: 30px;
+  left: 50%; /* fix: centrado real */
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2em;
+}
+
+.add-to-favorite-button,
+.go-to-button {
+  display: grid;
+  align-content: center;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  font-size: 25px;
+  transition: opacity 0.3s linear, background-color 0.3s linear, color 0.3s linear;
+}
+
+/* fix: los botones aparecen al hacer hover en la figura */
+.product-container figure:hover .add-to-favorite-button,
+.product-container figure:hover .go-to-button {
+  opacity: 1;
+}
+
+.add-to-favorite-button:hover,
+.go-to-button:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+}
+
+.product-container h3 {
   font-family: var(--primary-font);
   font-size: var(--fs14);
   font-weight: var(--fw600);
 }
 
-p {
+.product-container p {
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+.add-to-cart-button {
+  padding: 3px 7px;
+  font-size: var(--fs14);
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border: 1px solid var(--dark-color);
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+.add-to-cart-button:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
 }

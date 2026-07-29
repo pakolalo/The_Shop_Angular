@@ -10,13 +10,16 @@ import { CartService } from '../../services/cart';
   styleUrl: './cart.css',
 })
 export class Cart {
-
-  private header = inject(Header)
+  private header = inject(Header);
 
   cartService = inject(CartService);
   favorite: boolean = false;
 
   get isOpen() {
-    return this.header.isCartOpen()
+    return this.header.isCartOpen();
+  }
+
+  get subtotal() {
+    return this.cartService.total().toFixed(2);
   }
 }

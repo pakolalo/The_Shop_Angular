@@ -1,10 +1,23 @@
 <div class="product-container container">
   <figure>
     <img [src]="product().image" alt="image">
+    <div class="buttons-container">
+      <button
+      type="button"
+      class="add-to-favorite-button"
+      ><i class="ri-star-line"></i></button>
+      <button
+      type="button"
+      class="go-to-button"
+      ><i class="ri-eye-line"></i></button>
+    </div>
   </figure>
   <h3>{{ product().title }}</h3>
   <p>{{ product().price }}</p>
-  <p>{{ product().creationAt }}</p>
-  <button (click)="addToCartHandler()">Add to Cart</button>
+  <button
+  class="add-to-cart-button"
+  type="button"
+  (click)="addToCartHandler()"
+  >Add to Cart</button>
 </div>
 
