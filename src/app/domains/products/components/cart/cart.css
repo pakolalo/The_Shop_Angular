@@ -70,8 +70,12 @@ app-cart-product {
 }
 
 .total-container {
-  margin-top: 40px;
+  width: min(100%, 640px);
+  margin: 40px auto 0;
+  padding-inline: 16px;
+  box-sizing: border-box;
   gap: 2em;
+  justify-content: flex-end;
 }
 .total-container p {
   font-weight: 400;
@@ -106,6 +110,8 @@ app-cart-product {
   }
 
   .total-container {
+    width: min(100%, 900px);
+    padding-inline: 24px;
     justify-content: end;
   }
 }
