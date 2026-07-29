@@ -65,6 +65,7 @@ h2 {
 }
 
 .total-container h3 {
+  white-space: nowrap;
   font-size: 3rem;
   font-weight: var(--fw600);
 }

@@ -17,7 +17,7 @@
     </div>
   </figure>
   <h3>{{ product().title }}</h3>
-  <p>{{ product().price }}</p>
+  <p>{{ product().price | currency }}</p>
   <button
   class="add-to-cart-button"
   type="button"

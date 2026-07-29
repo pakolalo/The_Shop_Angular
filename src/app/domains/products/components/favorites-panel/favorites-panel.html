@@ -17,7 +17,7 @@
             <img [src]="product.image" [alt]="product.title" />
             <div class="favorite-item__info">
               <span class="favorite-item__title">{{ product.title }}</span>
-              <span class="favorite-item__price">$ {{ product.price.toFixed(2) }}</span>
+              <span class="favorite-item__price">{{ product.price | currency }}</span>
             </div>
             <button type="button" class="remove-favorite" (click)="cartService.removeFavorite(+product.id)">
               <i class="ri-delete-bin-line"></i>

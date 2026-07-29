@@ -1,11 +1,12 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
 import { CartProduct } from './../cart-product/cart-product'
 import { Header } from '../header/header';
 import { CartService } from '../../services/cart';
 
 @Component({
   selector: 'app-cart',
-  imports: [CartProduct],
+  imports: [CartProduct, CurrencyPipe],
   templateUrl: './cart.html',
   styleUrl: './cart.css',
 })
@@ -20,6 +21,6 @@ export class Cart {
   }
 
   get subtotal() {
-    return this.cartService.total().toFixed(2);
+    return this.cartService.total();
   }
 }
