@@ -81,3 +81,25 @@
   background-color: var(--white-color);
   color: var(--dark-color);
 }
+
+@media (max-width: 889px) {
+  .buttons-container {
+    top: 10px;
+    right: 10px;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    gap: 0;
+  }
+
+  .add-to-favorite-button {
+    opacity: 1;
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+
+  .go-to-button {
+    display: none;
+  }
+}

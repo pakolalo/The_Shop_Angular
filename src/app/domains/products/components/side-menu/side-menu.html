@@ -19,6 +19,12 @@
             <a href="">Discounts</a>
           </li>
           <li>
+            <button type="button" class="favorites-link" (click)="openFavorites()">
+              <span>Favorites</span>
+              <span class="favorites-count">{{ favoriteCount }}</span>
+            </button>
+          </li>
+          <li>
             <a
             href=""
             class="list-item-container"

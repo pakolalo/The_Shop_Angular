@@ -32,11 +32,17 @@ export class CartService {
     } else {
       this.favoriteProducts.set([...currentFavorites, product]);
     }
-  };
+  }
+
+  removeFavorite(productId: number) {
+    this.favoriteProducts.update(currentFavorites =>
+      currentFavorites.filter(favoriteProduct => favoriteProduct.id !== productId)
+    );
+  }
 
   isFavorite(product: ProductModel) {
     return this.favoriteProducts().some(
       favoriteProduct => favoriteProduct.id === product.id
     );
-  };
+  }
 }

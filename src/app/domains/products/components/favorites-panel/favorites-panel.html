@@ -1,0 +1,32 @@
+<section class="favorites-panel" [class.active]="isOpen">
+  <div class="favorites-panel__content">
+    <div class="favorites-panel__header">
+      <div>
+        <h3>Favorites</h3>
+        <p>{{ cartService.favoriteProducts().length }} selected</p>
+      </div>
+      <button type="button" class="favorites-close" (click)="close()">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+
+    @if (cartService.favoriteProducts().length > 0) {
+      <ul class="favorites-list">
+        @for (product of cartService.favoriteProducts(); track product.id) {
+          <li class="favorite-item">
+            <img [src]="product.image" [alt]="product.title" />
+            <div class="favorite-item__info">
+              <span class="favorite-item__title">{{ product.title }}</span>
+              <span class="favorite-item__price">$ {{ product.price.toFixed(2) }}</span>
+            </div>
+            <button type="button" class="remove-favorite" (click)="cartService.removeFavorite(+product.id)">
+              <i class="ri-delete-bin-line"></i>
+            </button>
+          </li>
+        }
+      </ul>
+    } @else {
+      <p class="favorites-empty">No favorites yet.</p>
+    }
+  </div>
+</section>

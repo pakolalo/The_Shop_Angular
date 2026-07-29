@@ -59,8 +59,11 @@ header {
 }
 
 .ri-user-line,
-.ri-star-line,
 .list-item {
+  display: none;
+}
+
+.favorites-trigger {
   display: none;
 }
 
@@ -125,9 +128,17 @@ button:hover {
   font-size: 1.3rem;
 }
 
+header {
+  padding-top: 10px;
+  width: 100%;
+  height: auto;
+}
+
 @media (min-width: 890px) {
   .menu {
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
   }
 
   .menu.container {
@@ -140,6 +151,19 @@ button:hover {
   .list-inline {
     gap: 2em;
   }
+
+  .menu > ul:nth-of-type(1) {
+    justify-self: start;
+  }
+
+  .menu > ul:nth-of-type(2) {
+    justify-self: center;
+  }
+
+  .menu > ul:nth-of-type(3) {
+    justify-self: end;
+  }
+
   .ri-menu-line {
     display: none;
   }
@@ -150,11 +174,24 @@ button:hover {
     display: block;
   }
 
+  .favorites-trigger {
+    display: block;
+  }
+
   .left-item-floating {
+    position: absolute;
+    top: 0;
+    right: -1px;
     display: flex;
   }
 
   .title {
-  font-size: 3rem;
-}
+    font-size: 3rem;
+  }
+
+  .favorites-panel {
+    max-width: 1240px;
+    width: 90%;
+    padding: 1.4rem 1.6rem;
+  }
 }

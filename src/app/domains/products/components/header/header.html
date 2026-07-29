@@ -11,14 +11,15 @@
           <i class="ri-user-line"></i>
         </a>
       </li>
-      <li>
-        <a
-        href=""
-        class="item-floating-container"
+      <li class="favorites-trigger">
+        <button
+          type="button"
+          class="item-floating-container"
+          (click)="toggleFavorites()"
         >
-          <span class="left-item-floating"> {{ cartService.favoriteCount() }}</span>
+          <span class="left-item-floating">{{ cartService.favoriteCount() }}</span>
           <i class="ri-star-line"></i>
-        </a>
+        </button>
       </li>
     </ul>
     <ul class="list-inline">
@@ -59,5 +60,6 @@
     </ul>
     <app-side-menu />
     <app-cart />
+    <app-favorites-panel />
   </nav>
 </header>

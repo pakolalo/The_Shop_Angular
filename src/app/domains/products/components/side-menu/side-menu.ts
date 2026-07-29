@@ -17,4 +17,13 @@ export class SideMenu {
   close() {
     this.header.closeSideMenu();
   }
+
+  openFavorites() {
+    this.header.closeSideMenu();
+    this.header.toggleFavorites();
+  }
+
+  get favoriteCount() {
+    return this.header.cartService.favoriteCount();
+  }
 }

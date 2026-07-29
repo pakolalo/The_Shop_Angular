@@ -3,6 +3,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 2em;
+}
+
+.products-wrapper app-product {
+  display: block;
+  flex: 0 0 270px;
+}
+
+@media (max-width: 889px) {
+  .products-wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1.6em;
+  }
 }
