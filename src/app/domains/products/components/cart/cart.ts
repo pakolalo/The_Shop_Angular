@@ -14,13 +14,11 @@ export class Cart {
   private header = inject(Header);
 
   private cartService = inject(CartService);
+  cartProducts = this.cartService.cartProducts;
+  subtotal = this.cartService.total;
   favorite: boolean = false;
 
   get isOpen() {
     return this.header.isCartOpen();
-  }
-
-  get subtotal() {
-    return this.cartService.total();
   }
 }

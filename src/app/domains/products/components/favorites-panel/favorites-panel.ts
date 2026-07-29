@@ -12,6 +12,8 @@ import { Header } from '../header/header';
 export class FavoritesPanel {
   private header = inject(Header);
   private cartService = inject(CartService);
+  favorites = this.cartService.favoriteProducts;
+  favoriteCount = this.cartService.favoriteCount;
 
   get isOpen() {
     return this.header.isFavoritesOpen();
@@ -19,5 +21,9 @@ export class FavoritesPanel {
 
   close() {
     this.header.closeFavorites();
+  }
+
+  removeFavorite(productId: number) {
+    this.cartService.removeFavorite(productId);
   }
 }

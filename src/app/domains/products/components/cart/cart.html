@@ -12,7 +12,7 @@
   </div>
   <h2>Cart</h2>
     <ul class="cart-items-container">
-      @for (product of cartService.cartProducts(); track product) {
+      @for (product of cartProducts(); track product) {
         <app-cart-product
       [product]="product"
       ></app-cart-product>
@@ -20,7 +20,7 @@
     </ul>
     <div class="total-container">
       <p>SUBTOTAL:</p>
-      <h3>{{ subtotal | currency }}</h3>
+      <h3>{{ subtotal() | currency }}</h3>
     </div>
     <button class="checkout-button">Checkout</button>
 </section>
