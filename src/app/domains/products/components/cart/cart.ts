@@ -13,7 +13,7 @@ import { CartService } from '../../services/cart';
 export class Cart {
   private header = inject(Header);
 
-  cartService = inject(CartService);
+  private cartService = inject(CartService);
   favorite: boolean = false;
 
   get isOpen() {

@@ -11,7 +11,7 @@ import { Header } from '../header/header';
 })
 export class FavoritesPanel {
   private header = inject(Header);
-  cartService = inject(CartService);
+  private cartService = inject(CartService);
 
   get isOpen() {
     return this.header.isFavoritesOpen();

@@ -16,7 +16,7 @@ export class Header {
   isFavoritesOpen = signal(false);
   Number = Number;
 
-  cartService = inject(CartService);
+  private cartService = inject(CartService);
 
   toggleSideMenu() {
     this.isSideMenuOpen.update((value) => {

@@ -11,7 +11,7 @@ import { CartService } from '../../services/cart';
 })
 export class Product {
   product = input.required<ProductModel>();
-  cartService = inject(CartService);
+  private cartService = inject(CartService);
 
   addToCart = output<ProductModel>();
 
