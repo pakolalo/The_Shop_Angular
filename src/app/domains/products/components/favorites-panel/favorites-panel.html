@@ -19,9 +19,19 @@
               <span class="favorite-item__title">{{ product.title }}</span>
               <span class="favorite-item__price">{{ product.price | currency }}</span>
             </div>
-            <button type="button" class="remove-favorite" (click)="removeFavorite(+ product.id)">
+            <div class="favorite-item__actions">
+              <button
+              type="button"
+              class="add-to-cart-button favorite-add-to-cart-button"
+              (click)="addToCart(product)"
+              >Add to Cart</button>
+              <button type="button"
+              class="remove-favorite"
+              (click)="removeFavorite(+ product.id)"
+              >
               <i class="ri-delete-bin-line"></i>
             </button>
+            </div>
           </li>
         }
       </ul>

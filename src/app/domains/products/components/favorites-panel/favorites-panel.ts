@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { CartService } from '../../services/cart';
 import { Header } from '../header/header';
+import { ProductModel } from '../../models/product.model';
 
 @Component({
   selector: 'app-favorites-panel',
@@ -22,6 +23,10 @@ export class FavoritesPanel {
   close() {
     this.header.closeFavorites();
   }
+
+  addToCart(product: ProductModel) {
+    this.cartService.addProduct(product)
+  };
 
   removeFavorite(productId: number) {
     this.cartService.removeFavorite(productId);

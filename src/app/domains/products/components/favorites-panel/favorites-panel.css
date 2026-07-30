@@ -94,6 +94,28 @@
   color: var(--grey-color, #6b7280);
 }
 
+.favorite-item__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.favorite-add-to-cart-button {
+  padding: 0.35rem 0.7rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  transition: .3s all linear;
+  border: 1px solid var(--dark-color);
+}
+
+.favorite-add-to-cart-button:hover {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+}
+
 .remove-favorite {
   color: var(--grey-color, #6b7280);
   font-size: 22px;
