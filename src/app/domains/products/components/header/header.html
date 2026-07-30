@@ -17,7 +17,7 @@
           class="item-floating-container"
           (click)="toggleFavorites()"
         >
-          <span class="left-item-floating">{{ cartService.favoriteCount() }}</span>
+          <span class="left-item-floating">{{ favoriteCount() }}</span>
           <i class="ri-star-line"></i>
         </button>
       </li>
@@ -53,7 +53,7 @@
         (click)="toggleCart()"
         class="item-floating-container"
         >
-          <span class="item-floating">{{ cartService.cartProducts().length }}</span>
+          <span class="item-floating">{{ cartCount().length }}</span>
           <i class="ri-shopping-bag-line"></i>
         </button>
       </li>

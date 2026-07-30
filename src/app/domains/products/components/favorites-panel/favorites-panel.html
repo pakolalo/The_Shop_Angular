@@ -14,7 +14,7 @@
       <ul class="favorites-list">
         @for (product of favorites(); track product.id) {
           <li class="favorite-item">
-            <img [src]="product.image" [alt]="product.title" />
+            <img [src]="product.images[0]" [alt]="product.title" />
             <div class="favorite-item__info">
               <span class="favorite-item__title">{{ product.title }}</span>
               <span class="favorite-item__price">{{ product.price | currency }}</span>

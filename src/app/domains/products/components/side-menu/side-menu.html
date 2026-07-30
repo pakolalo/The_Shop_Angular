@@ -1,4 +1,4 @@
-<section class="side-menu" [class.active]="isOpen">
+<section class="side-menu" [class.active]="isOpen()">
   <div class="menu-container">
     <section class="left-container">
       <nav class="menu">
@@ -21,7 +21,7 @@
           <li>
             <button type="button" class="favorites-link" (click)="openFavorites()">
               <span>Favorites</span>
-              <span class="favorites-count">{{ favoriteCount }}</span>
+              <span class="favorites-count">{{ favoriteCount() }}</span>
             </button>
           </li>
           <li>
@@ -38,12 +38,8 @@
           </li>
         </ul>
         <div class="bottom-container">
-          <a href="">
-            <button class="l-button">LOGIN</button>
-          </a>
-          <a href="">
-            <button class="r-button">REGISTER</button>
-          </a>
+          <button type="button" class="l-button">LOGIN</button>
+          <button type="button" class="r-button">REGISTER</button>
         </div>
       </nav>
     </section>

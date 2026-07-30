@@ -17,6 +17,8 @@ export class Header {
   Number = Number;
 
   private cartService = inject(CartService);
+  readonly cartCount = this.cartService.cartProducts;
+  readonly favoriteCount = this.cartService.favoriteCount;
 
   toggleSideMenu() {
     this.isSideMenuOpen.update((value) => {

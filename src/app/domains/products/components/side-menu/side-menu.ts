@@ -9,10 +9,8 @@ import { Header } from '../header/header';
 })
 export class SideMenu {
   private header = inject(Header);
-
-  get isOpen() {
-    return this.header.isSideMenuOpen();
-  }
+  readonly isOpen = this.header.isSideMenuOpen;
+  readonly favoriteCount = this.header.favoriteCount;
 
   close() {
     this.header.closeSideMenu();
@@ -21,9 +19,5 @@ export class SideMenu {
   openFavorites() {
     this.header.closeSideMenu();
     this.header.toggleFavorites();
-  }
-
-  get favoriteCount() {
-    return this.header.cartService.favoriteCount();
   }
 }
