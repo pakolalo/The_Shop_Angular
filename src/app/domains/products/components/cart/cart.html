@@ -12,7 +12,7 @@
   </div>
   <h2>Cart</h2>
     <ul class="cart-items-container">
-      @for (product of cartProducts(); track product) {
+      @for (product of cartProducts(); track product.id) {
         <app-cart-product
       [product]="product"
       ></app-cart-product>
